@@ -23,6 +23,13 @@ final goRouterProvider = Provider<GoRouter>(
           builder: (context, state) =>
               AppRouter.signUPPageRouteBuilder(context, state),
         ),
+        // * VERIFY_SIGN_UP
+        GoRoute(
+          path: AppRouterConstant.VERIFY_SIGN_UP,
+          name: AppRouterConstant.VERIFY_SIGN_UP,
+          builder: (context, state) =>
+              AppRouter.verifySignUPPageRouteBuilder(context, state),
+        ),
       ],
     );
   },

@@ -12,4 +12,5 @@ class AppRouterConstant {
   static String LOGIN = '/LOGIN';
   // * SignUp
   static String SIGN_UP = '/SIGN_UP';
+  static String VERIFY_SIGN_UP = '/VERIFY_SIGN_UP';
 }

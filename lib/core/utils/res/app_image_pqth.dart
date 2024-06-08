@@ -5,4 +5,5 @@ class AppImagePath {
 
   static String GOOGLE = "$_imagesPath/google.png";
   static String APPLE = "$_imagesPath/apple.png";
+  static String VERIFICATION = "$_imagesPath/verification.png";
 }

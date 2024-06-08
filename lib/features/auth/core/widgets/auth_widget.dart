@@ -6,10 +6,10 @@ import 'package:hedg/core/ui/widgets/images/ui_svg_image_asset.dart';
 import 'package:hedg/core/ui/widgets/sized_box/gap_h30.dart';
 import 'package:hedg/core/ui/widgets/text/ui_title_large.dart';
 import 'package:hedg/core/utils/res/app_svg_path.dart';
-import 'package:hedg/core/utils/res/values_manager.dart';
 import 'package:hedg/core/utils/theme/app_color.dart';
 
-import '../../../../core/utils/res/app_shadow.dart';
+import '../../../../core/ui/widgets/cards/ui_card.dart';
+import '../../../../core/utils/res/values_manager.dart';
 
 class AuthWidget extends StatelessWidget {
   const AuthWidget({
@@ -74,33 +74,14 @@ class AuthWidget extends StatelessWidget {
                 height: size.height,
                 width: size.width,
                 child: SingleChildScrollView(
-                  child: Container(
-                    // alignment: Alignment.topCenter,
-                    // height: size.height,
-                    width: size.width,
+                  child: UiCard(
                     margin: EdgeInsetsDirectional.only(
                       start: AppSizes.MARGIN_26,
                       end: AppSizes.MARGIN_26,
                       top: size.height * 0.28,
                       bottom: AppSizes.MARGIN_10,
                     ),
-                    padding: EdgeInsets.symmetric(
-                      vertical: AppSizes.PADDING_32,
-                      horizontal: AppSizes.PADDING_20,
-                    ),
-                    decoration: BoxDecoration(
-                      color: AppColor.white,
-                      borderRadius: BorderRadius.circular(
-                        AppSizes.RADIUS_14,
-                      ),
-                      boxShadow: AppShadow.shadow(),
-                    ),
                     child: cardWidget,
-
-                    /// width: 375
-                    /// box width: 323
-                    /// precentage margin: 14%
-                    /// 7 for each side
                   ),
                 ),
               ),

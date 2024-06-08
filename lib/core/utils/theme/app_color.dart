@@ -32,33 +32,34 @@ import 'package:flutter/material.dart';
 class AppColor {
   AppColor._(); // Private constructor to prevent instantiation
 
-  static Color white = Color(0xffffffff);
-  static Color orange = Color(0xffEF5830);
-  static Color color1 = Color(0xffF1F6);
+  static const Color white = Color(0xffffffff);
+  static const Color orange = Color(0xffEF5830);
+  static const Color color1 = Color(0xffF1F6FF);
 
-  static Color color2 = Color(0xff1B404F);
-  static Color blue = Color(0xff098AD3);
-  static Color blue15Transparency = Color(0x26098AD3); // new
-  static Color secondary = Color(0xff00BF54);
-  static Color onSecondary = Color(0xffffffff); // new
-  static Color color4 = Color(0xff235347);
-  static Color color5 = Color(0xff00BF90);
-  static Color color6 = Color(0xff0DD967);
-  static Color primary = Color(0xff1B506F);
-  static Color onPrimary = Color(0xffffffff); // new
-  static Color primaryContainer = Color(0xffF2F7FF);
-  static Color onPrimaryContainer = Color(0xff000000);
-  static Color disablePrimary = Color(0xff1B506F); // new
-  static Color color8 = Color(0xffFFC53E);
-  static Color color9 = Color(0xff6E838F);
-  static Color color10 = Color(0xffF2F7FF);
-  static Color color11 = Color(0xff1B506F);
+  static const Color color2 = Color(0xff1B404F);
+  static const Color blue = Color(0xff098AD3);
+  static const Color blue15Transparency = Color(0x26098AD3); // new
+  static const Color secondary = Color(0xff00BF54);
+  static const Color onSecondary = Color(0xffffffff); // new
+  static const Color color4 = Color(0xff235347);
+  static const Color color5 = Color(0xff00BF90);
+  static const Color color6 = Color(0xff0DD967);
+  static const Color primary = Color(0xff1B506F);
+  static const Color onPrimary = Color(0xffffffff); // new
+  static const Color primaryContainer = Color(0xffF2F7FF);
+  static const Color onPrimaryContainer = Color(0xff000000);
+  static const Color disablePrimary = Color(0xff1B506F); // new
+  static const Color color8 = Color(0xffFFC53E);
+  static const Color color9 = Color(0xff6E838F);
+  static const Color color10 = Color(0xffF2F7FF);
+  static const Color color11 = Color(0xff1B506F);
   // * new color
-  static Color background = Color(0xffffffff);
-  static Color surface = Color(0xffffffff);
-  static Color labelColor = Color(0xff6E838F);
-  static Color textFormField = Color(0xff10284A);
-  static Color squareBtn = Color(0xffE6F3FB);
-  static Color outline = Color(0x1A10284A); // 10% transparency
+  static const Color background = Color(0xffffffff);
+  static const Color surface = Color(0xffffffff);
+  static const Color labelColor = Color(0xff6E838F);
+  static const Color textFormField = Color(0xff10284A);
+  static const Color squareBtn = Color(0xffE6F3FB);
+  static const Color outline = Color(0x1A10284A); // 10% transparency
+  static const Color inActiveColor = Color(0xffB3CBEF);
   static Color error = Colors.red.shade700;
 }

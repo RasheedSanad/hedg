@@ -20,7 +20,7 @@ class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
 
   _signUp(BuildContext context) {
-    FocusScope.of(context).unfocus();
+    context.push(AppRouterConstant.VERIFY_SIGN_UP);
   }
 
   @override
@@ -36,12 +36,16 @@ class SignUpPage extends StatelessWidget {
           //   onEditingComplete: () => _login(context),
           // ),
           FormFieldsSignUpWidget(
-            onEditingComplete: () => _signUp(context),
+            onEditingComplete: () {
+              _signUp(context);
+            },
           ),
 
           const GapH14(),
           BottomAuthCardWidget(
-            loginOnTap: () => _signUp(context),
+            loginOnTap: () {
+              _signUp(context);
+            },
             textBtn: C.SIGN_UP,
           ),
           const GapH14(),
