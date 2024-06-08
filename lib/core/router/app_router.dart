@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hedg/features/auth/login/presentation/pages/create_password_page.dart';
 import 'package:hedg/features/auth/login/presentation/pages/forgot_password_page.dart';
 import 'package:hedg/features/auth/sign_up/presentation/sign_up_page.dart';
 import 'package:hedg/features/auth/sign_up/presentation/verify_sign_up_page.dart';
@@ -21,6 +22,12 @@ class AppRouter {
   static forgotPasswordPageRouteBuilder(
           BuildContext context, GoRouterState state) =>
       ForgotPasswordPage(
+        key: state.pageKey,
+      );
+  // CREATE_PASSWORD
+  static createPasswordPageRouteBuilder(
+          BuildContext context, GoRouterState state) =>
+      CreatePasswordPage(
         key: state.pageKey,
       );
   // * SIGN_UP

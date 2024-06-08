@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:hedg/core/router/app_router_constant.dart';
 import 'package:hedg/core/ui/widgets/chips_buttons/ui_button.dart';
 import 'package:hedg/core/ui/widgets/sized_box/gap_h14.dart';
 import 'package:hedg/core/ui/widgets/text_field/ui_phone_number_form_field.dart';
@@ -10,6 +12,10 @@ import '../../../../../core/utils/theme/app_color.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   const ForgotPasswordPage({super.key});
+
+  _send(BuildContext context) {
+    context.push(AppRouterConstant.CREATE_PASSWORD);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +33,13 @@ class ForgotPasswordPage extends StatelessWidget {
       ),
       cardWidget: Column(
         children: [
-          UiPhoneNumberFormField(),
+          UiPhoneNumberFormField(
+            onEditingComplete: () => _send(context),
+          ),
           const GapH14(),
           UiButton(
             text: C.SEND,
-            onPressed: () {
-              // TODO: send onTap
-            },
+            onPressed: () => _send(context),
             isMaxWidth: true,
           )
         ],

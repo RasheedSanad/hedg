@@ -24,6 +24,13 @@ final goRouterProvider = Provider<GoRouter>(
           builder: (context, state) =>
               AppRouter.forgotPasswordPageRouteBuilder(context, state),
         ),
+        // CREATE_PASSWORD
+        GoRoute(
+          path: AppRouterConstant.CREATE_PASSWORD,
+          name: AppRouterConstant.CREATE_PASSWORD,
+          builder: (context, state) =>
+              AppRouter.createPasswordPageRouteBuilder(context, state),
+        ),
         // * SIGN_UP
         // SIGN_UP
         GoRoute(
