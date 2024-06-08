@@ -1,8 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hedg/core/router/app_router_constant.dart';
 import 'package:hedg/core/ui/widgets/chips_buttons/ui_text_button.dart';
@@ -26,6 +22,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final TextTheme textTheme = Theme.of(context).textTheme;
     return AuthWidget(
       title: C.LOGIN_IN_YOUR_ACCOUNT,
       cardWidget: Column(
@@ -39,9 +36,11 @@ class LoginPage extends StatelessWidget {
           FittedBox(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: size.width * 0.25),
-              child: UiLabelLarge(
-                C.FORGOT_YOUR_PASSWORD,
+              child: UiTextButton(
+                text: C.FORGOT_YOUR_PASSWORD,
                 color: AppColor.primary,
+                style: textTheme.labelLarge,
+                onTap: () => context.push(AppRouterConstant.FORGOT_PASSWORD),
               ),
             ),
           ),
@@ -57,7 +56,7 @@ class LoginPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  UiLabelLarge(
+                  const UiLabelLarge(
                     C.DONT_HAVE_AN_ACCOUNT,
                     // fontSize: 16.dm,
                   ),
@@ -65,7 +64,7 @@ class LoginPage extends StatelessWidget {
                   UiTextButton(
                     text: C.SIGN_UP,
                     color: AppColor.secondary,
-                    style: Theme.of(context).textTheme.labelLarge,
+                    style: textTheme.labelLarge,
                     onTap: () => context.go(AppRouterConstant.SIGN_UP),
                     // fontSize: 16.dm,
                   ),

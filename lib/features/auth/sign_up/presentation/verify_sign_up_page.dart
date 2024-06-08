@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../../../../core/ui/widgets/chips_buttons/ui_button.dart';
 import '../../../../core/ui/widgets/chips_buttons/ui_text_button.dart';
