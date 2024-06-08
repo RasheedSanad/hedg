@@ -22,12 +22,7 @@ class MyApp extends ConsumerWidget {
     //
     final _router = ref.watch(goRouterProvider);
     Size size = MediaQuery.of(context).size;
-    log("width:${size.width}", name: _PAGE_NAME);
-    log("height:${size.height}", name: _PAGE_NAME);
-    // TODO: resolve this problem
-    /// problem fontSize in this device size:
-    /// width:  411.42857142857144
-    /// height: 843.4285714285714
+
     return ScreenUtilInit(
       designSize: Size(size.width, size.height),
       minTextAdapt: true,
