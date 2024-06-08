@@ -37,6 +37,8 @@ class UiTextFormField extends StatelessWidget {
   final bool enableSuggestions;
   final ValueChanged<String>? onFieldSubmitted;
   final String? errorText;
+  final AutovalidateMode? autovalidateMode;
+  final InputBorder? enabledBorder;
   UiTextFormField({
     Key? key,
     this.numLines = 1,
@@ -52,6 +54,7 @@ class UiTextFormField extends StatelessWidget {
     this.colorFocusedBorder,
     this.validator,
     this.keyboardType,
+    this.enabledBorder,
     this.suffixIcon,
     this.obscureText = false,
     this.focusedColor,
@@ -59,6 +62,7 @@ class UiTextFormField extends StatelessWidget {
     this.initialValue,
     this.readOnly = false,
     this.textDirection,
+    this.autovalidateMode,
     this.errorText,
     this.enableInteractiveSelection,
     this.autofocus = false,
@@ -86,7 +90,7 @@ class UiTextFormField extends StatelessWidget {
       autofocus: autofocus,
       enableSuggestions: enableSuggestions,
       enableInteractiveSelection: enableInteractiveSelection,
-
+      autovalidateMode: autovalidateMode,
       // style: theme.textTheme.bodyLarge,
       controller: controller,
       textInputAction: textInputAction,
@@ -109,10 +113,11 @@ class UiTextFormField extends StatelessWidget {
         suffixIcon: suffixIcon,
         fillColor: AppColor.white,
         filled: true,
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(AppSizes.RADIUS_4),
-          borderSide: BorderSide(color: AppColor.outline, width: 1),
-        ),
+        enabledBorder: enabledBorder ??
+            OutlineInputBorder(
+              borderRadius: BorderRadius.circular(AppSizes.RADIUS_4),
+              borderSide: BorderSide(color: AppColor.outline, width: 1),
+            ),
         errorText: errorText,
         contentPadding: EdgeInsets.symmetric(
             vertical: AppSizes.PADDING_18, horizontal: AppSizes.PADDING_16),

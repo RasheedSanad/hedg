@@ -10,4 +10,6 @@ class AppRouterConstant {
   static String ONBOARDING = '/ONBOARDING';
   // * Login
   static String LOGIN = '/LOGIN';
+  // * SignUp
+  static String SIGN_UP = '/SIGN_UP';
 }

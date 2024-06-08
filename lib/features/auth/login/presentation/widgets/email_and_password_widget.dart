@@ -69,7 +69,7 @@ class _EmailAndPasswordWidgetState
       children: [
         UiTextFormField(
           hintText: C.EMAIL,
-          autofocus: true,
+          // autofocus: true,
           textInputAction: TextInputAction.next,
           keyboardType: TextInputType.emailAddress,
           focusNode: focus,
@@ -84,10 +84,10 @@ class _EmailAndPasswordWidgetState
         UiTextFormField(
           hintText: C.PASSWORD,
           textInputAction: TextInputAction.done,
-          autofocus: true,
+          // autofocus: true,
           // textInputType: TextInputType.none,
           obscureText: isHide ? true : false,
-          // enableSuggestions: false,
+          enableSuggestions: false,
           onEditingComplete: widget.onEditingComplete,
 
           // focusNode: focus,

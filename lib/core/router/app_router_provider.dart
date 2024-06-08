@@ -16,6 +16,13 @@ final goRouterProvider = Provider<GoRouter>(
           builder: (context, state) =>
               AppRouter.loginPageRouteBuilder(context, state),
         ),
+        // * SIGN_UP
+        GoRoute(
+          path: AppRouterConstant.SIGN_UP,
+          name: AppRouterConstant.SIGN_UP,
+          builder: (context, state) =>
+              AppRouter.signUPPageRouteBuilder(context, state),
+        ),
       ],
     );
   },

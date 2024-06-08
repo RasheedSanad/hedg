@@ -16,15 +16,17 @@ class BottomAuthCardWidget extends StatelessWidget {
   const BottomAuthCardWidget({
     super.key,
     required this.loginOnTap,
+    required this.textBtn,
   });
   final Function()? loginOnTap;
 
+  final String textBtn;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         UiButton(
-          text: C.LOG_IN,
+          text: textBtn,
           onPressed: loginOnTap,
           isMaxWidth: true,
         ),
