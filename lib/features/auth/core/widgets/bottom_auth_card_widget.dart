@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:hedg/core/ui/widgets/sized_box/gap_w20.dart';
+import 'package:hedg/core/ui/widgets/text/ui_label_medium.dart';
 
 import '../../../../core/ui/widgets/chips_buttons/ui_button.dart';
 import '../../../../core/ui/widgets/chips_buttons/ui_chip_icon.dart';
-import '../../../../core/ui/widgets/chips_buttons/ui_text_button.dart';
 import '../../../../core/ui/widgets/images/ui_image_asset.dart';
 import '../../../../core/ui/widgets/sized_box/gap_h14.dart';
-import '../../../../core/ui/widgets/sized_box/gap_w6.dart';
-import '../../../../core/ui/widgets/text/ui_label_medium.dart';
 import '../../../../core/utils/localization/strings_manager.dart';
 import '../../../../core/utils/res/app_image_pqth.dart';
 import '../../../../core/utils/res/values_manager.dart';
@@ -31,7 +31,10 @@ class BottomAuthCardWidget extends StatelessWidget {
           isMaxWidth: true,
         ),
         const GapH14(),
-        const UiLabelMedium(C.OR),
+        UiLabelMedium(
+          C.OR,
+          // fontSize: MediaQuery.of(context).size.width * 0.023,
+        ),
         const GapH14(),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -45,7 +48,7 @@ class BottomAuthCardWidget extends StatelessWidget {
                 ),
               ),
             ),
-            const GapW6(),
+            const GapW20(),
             UiChipIcon(
               backgroundColor: AppColor.squareBtn,
               icon: Padding(

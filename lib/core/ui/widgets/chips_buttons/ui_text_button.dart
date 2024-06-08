@@ -10,6 +10,7 @@ class UiTextButton extends StatelessWidget {
   final TextDecoration? decoration;
   final TextDirection? textDirection;
   final Color? decorationColor;
+  final double? fontSize;
 
   const UiTextButton({
     super.key,
@@ -20,6 +21,7 @@ class UiTextButton extends StatelessWidget {
     this.decoration,
     this.textDirection,
     this.decorationColor,
+    this.fontSize,
   });
 
   @override
@@ -35,6 +37,7 @@ class UiTextButton extends StatelessWidget {
         decoration: decoration,
         textDirection: textDirection,
         decorationColor: decorationColor,
+        fontSize: fontSize,
       ),
     );
   }

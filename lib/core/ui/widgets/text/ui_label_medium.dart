@@ -9,10 +9,12 @@ class UiLabelMedium extends StatelessWidget {
     this.color,
     this.decoration,
     this.textAlign,
+    this.fontSize,
   });
   final String text;
   final Color? color;
   final TextAlign? textAlign;
+  final double? fontSize;
   final TextDecoration? decoration;
 
   @override
@@ -24,6 +26,7 @@ class UiLabelMedium extends StatelessWidget {
       textAlign: textAlign,
       decoration: decoration,
       decorationColor: color ?? Theme.of(context).colorScheme.primary,
+      fontSize: fontSize,
     );
   }
 }

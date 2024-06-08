@@ -72,10 +72,8 @@ class _EmailAndPasswordWidgetState
           // autofocus: true,
           textInputAction: TextInputAction.next,
           keyboardType: TextInputType.emailAddress,
-          focusNode: focus,
-          onFieldSubmitted: (v) {
-            FocusScope.of(context).nextFocus();
-          },
+          // focusNode: focus,
+
           // errorText: _emailErrorText,
           validator: (value) => _emailErrorText,
           onChanged: _validateEmail,
@@ -83,6 +81,9 @@ class _EmailAndPasswordWidgetState
         const GapH10(),
         UiTextFormField(
           hintText: C.PASSWORD,
+          onFieldSubmitted: (v) {
+            FocusScope.of(context).nextFocus();
+          },
           textInputAction: TextInputAction.done,
           // autofocus: true,
           // textInputType: TextInputType.none,

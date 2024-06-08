@@ -1,4 +1,3 @@
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppSizes {
@@ -35,32 +34,32 @@ class AppSizes {
   static const double SIZE_0 = 0.0;
 
   //TextSizes
-  static double TEXT_SIZE_96 = 96.0.sp;
-  // static double TEXT_SIZE_64 = 64.0.sp;
-  static double TEXT_SIZE_60 = 60.0.sp;
-  static double TEXT_SIZE_57 = 57.0.sp;
-  static double TEXT_SIZE_50 = 50.0.sp;
-  static double TEXT_SIZE_48 = 48.0.sp;
-  static double TEXT_SIZE_45 = 45.0.sp;
-  static double TEXT_SIZE_44 = 44.0.sp;
-  static double TEXT_SIZE_40 = 40.0.sp;
-  static double TEXT_SIZE_36 = 36.0.sp;
-  static double TEXT_SIZE_34 = 34.0.sp;
-  static double TEXT_SIZE_32 = 32.0.sp;
-  static double TEXT_SIZE_30 = 30.0.sp;
-  static double TEXT_SIZE_28 = 28.0.sp;
-  static double TEXT_SIZE_24 = 24.0.sp;
-  static double TEXT_SIZE_22 = 22.0.sp;
-  static double TEXT_SIZE_20 = 20.0.sp;
-  static double TEXT_SIZE_18 = 18.0.sp;
-  static double TEXT_SIZE_16 = 16.0.sp;
-  static double TEXT_SIZE_14 = 14.0.sp;
-  static double TEXT_SIZE_13 = 13.0.sp;
-  static double TEXT_SIZE_12 = 12.0.sp;
-  static double TEXT_SIZE_11 = 11.0.sp;
-  static double TEXT_SIZE_10 = 10.0.sp;
-  static double TEXT_SIZE_8 = 8.0.sp;
-  static double TEXT_SIZE_6 = 6.0.sp;
+  static double TEXT_SIZE_96 = 96.0.spMin;
+  // static double TEXT_SIZE_64 = 64.0.spMin;
+  static double TEXT_SIZE_60 = 60.0.spMin;
+  static double TEXT_SIZE_57 = 57.0.spMin;
+  static double TEXT_SIZE_50 = 50.0.spMin;
+  static double TEXT_SIZE_48 = 48.0.spMin;
+  static double TEXT_SIZE_45 = 45.0.spMin;
+  static double TEXT_SIZE_44 = 44.0.spMin;
+  static double TEXT_SIZE_40 = 40.0.spMin;
+  static double TEXT_SIZE_36 = 36.0.spMin;
+  static double TEXT_SIZE_34 = 34.0.spMin;
+  static double TEXT_SIZE_32 = 32.0.spMin;
+  static double TEXT_SIZE_30 = 30.0.spMin;
+  static double TEXT_SIZE_28 = 28.0.spMin;
+  static double TEXT_SIZE_24 = 24.0.spMin;
+  static double TEXT_SIZE_22 = 22.0.spMin;
+  static double TEXT_SIZE_20 = 20.0.spMin;
+  static double TEXT_SIZE_18 = 18.0.spMin;
+  static double TEXT_SIZE_16 = 16.0.spMin;
+  static double TEXT_SIZE_14 = 14.0.spMin;
+  static double TEXT_SIZE_13 = 13.0.spMin;
+  static double TEXT_SIZE_12 = 12.0.spMin;
+  static double TEXT_SIZE_11 = 11.0.spMin;
+  static double TEXT_SIZE_10 = 10.0.spMin;
+  static double TEXT_SIZE_8 = 8.0.spMin;
+  static double TEXT_SIZE_6 = 6.0.spMin;
 
   //IconSizes
   static double ICON_SIZE_200 = 200.0.sp;
@@ -87,8 +86,8 @@ class AppSizes {
   static double ICON_SIZE_8 = 8.0.sp;
 
   //Heights
-  static double HEIGHT_400= 400.0.h;
-  static double HEIGHT_350= 350.0.h;
+  static double HEIGHT_400 = 400.0.h;
+  static double HEIGHT_350 = 350.0.h;
   static double HEIGHT_300 = 300.0.h;
   static double HEIGHT_288 = 288.0.h;
   static double HEIGHT_280 = 280.0.h;
@@ -229,29 +228,29 @@ class AppSizes {
   static const double PADDING_0 = 0.0;
 
   //Radius
-  static  double RADIUS_100 = 100.r;
-  static  double RADIUS_80 = 80.0.r;
-  static  double RADIUS_70 = 70.0.r;
-  static  double RADIUS_60 = 60.0.r;
-  static  double RADIUS_40 = 40.0.r;
-  static  double RADIUS_36 = 36.0.r;
-  static  double RADIUS_32 = 32.0.r;
-  static  double RADIUS_30 = 30.0.r;
-  static  double RADIUS_24 = 24.0.r;
-  static  double RADIUS_22 = 22.0.r;
-  static  double RADIUS_20 = 20.0.r;
-  static  double RADIUS_18 = 18.0.r;
-  static  double RADIUS_16 = 16.0.r;
-  static  double RADIUS_14 = 14.0.r;
-  static  double RADIUS_12 = 12.0.r;
-  static  double RADIUS_10 = 10.0.r;
-  static  double RADIUS_8 = 8.0.r;
-  static  double RADIUS_6 = 6.0.r;
-  static  double RADIUS_5 = 5.0.r;
-  static  double RADIUS_4 = 4.0.r;
-  static  double RADIUS_3 = 3.0.r;
-  static  double RADIUS_2 = 2.0.r;
-  static  double RADIUS_1 = 1.0.r;
+  static double RADIUS_100 = 100.r;
+  static double RADIUS_80 = 80.0.r;
+  static double RADIUS_70 = 70.0.r;
+  static double RADIUS_60 = 60.0.r;
+  static double RADIUS_40 = 40.0.r;
+  static double RADIUS_36 = 36.0.r;
+  static double RADIUS_32 = 32.0.r;
+  static double RADIUS_30 = 30.0.r;
+  static double RADIUS_24 = 24.0.r;
+  static double RADIUS_22 = 22.0.r;
+  static double RADIUS_20 = 20.0.r;
+  static double RADIUS_18 = 18.0.r;
+  static double RADIUS_16 = 16.0.r;
+  static double RADIUS_14 = 14.0.r;
+  static double RADIUS_12 = 12.0.r;
+  static double RADIUS_10 = 10.0.r;
+  static double RADIUS_8 = 8.0.r;
+  static double RADIUS_6 = 6.0.r;
+  static double RADIUS_5 = 5.0.r;
+  static double RADIUS_4 = 4.0.r;
+  static double RADIUS_3 = 3.0.r;
+  static double RADIUS_2 = 2.0.r;
+  static double RADIUS_1 = 1.0.r;
   static const double RADIUS_0 = 0.0;
 
   //Elevations

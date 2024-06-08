@@ -1,7 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hedg/core/ui/widgets/sized_box/gap_w10.dart';
+import 'package:hedg/core/ui/widgets/sized_box/gap_w4.dart';
 import 'package:hedg/core/ui/widgets/text/ui_label_large.dart';
-import 'package:hedg/core/ui/widgets/text/ui_label_medium.dart';
 import 'package:hedg/core/utils/helper/text_input_formatter_helper.dart';
 import 'package:hedg/core/utils/res/values_manager.dart';
 
@@ -26,6 +29,19 @@ class FormFieldsSignUpWidget extends ConsumerStatefulWidget {
 class _FormFieldsSignUpWidgetState
     extends ConsumerState<FormFieldsSignUpWidget> {
   String? _emailErrorText;
+  // late FocusNode focus;
+
+  // @override
+  // void initState() {
+  //   focus = FocusNode();
+  //   super.initState();
+  // }
+
+  // @override
+  // void dispose() {
+  //   focus.dispose();
+  //   super.dispose();
+  // }
 
   void _validateEmail(String value) {
     if (value.isEmpty) {
@@ -69,6 +85,7 @@ class _FormFieldsSignUpWidgetState
           // autofocus: true,
           textInputAction: TextInputAction.next,
           keyboardType: TextInputType.name,
+
           // focusNode: focus,
           // onFieldSubmitted: (v) {
           //   FocusScope.of(context).nextFocus();
@@ -78,15 +95,16 @@ class _FormFieldsSignUpWidgetState
         UiTextFormField(
           hintText: C.EMAIL,
           // autofocus: true,
-          onFieldSubmitted: (v) {
-            FocusScope.of(context).nextFocus();
-          },
           textInputAction: TextInputAction.next,
-          keyboardType: TextInputType.emailAddress,
+          // onFieldSubmitted: (v) {
+          //   FocusScope.of(context).nextFocus();
+          // },
 
+          keyboardType: TextInputType.emailAddress,
+          // focusNode: focus,
           // errorText: _emailErrorText,
-          validator: (value) => _emailErrorText,
-          onChanged: _validateEmail,
+          // validator: (value) => _emailErrorText,
+          // onChanged: _validateEmail,
         ),
         const GapH10(),
         UiTextFormField(
@@ -96,11 +114,14 @@ class _FormFieldsSignUpWidgetState
           // textInputType: TextInputType.none,
           enableSuggestions: false,
           obscureText: isHide ? true : false,
+
+          // onFieldSubmitted: (v) {
+          //   FocusScope.of(context).nextFocus();
+          // },
+          // enableSuggestions: false,
           onFieldSubmitted: (v) {
             FocusScope.of(context).nextFocus();
           },
-          // enableSuggestions: false,
-
           // focusNode: focus,
           suffixIcon: InkWell(
             onTap: () {
@@ -118,12 +139,13 @@ class _FormFieldsSignUpWidgetState
         // phone number
         Row(
           children: [
+            // flat
             Expanded(
               flex: 1,
               child: Container(
                 constraints: BoxConstraints(maxHeight: AppSizes.HEIGHT_44),
                 padding: EdgeInsets.symmetric(
-                  horizontal: AppSizes.PADDING_12,
+                  horizontal: AppSizes.PADDING_14,
                   // vertical: AppSizes.PADDING_18,
                 ),
                 decoration: BoxDecoration(
@@ -135,20 +157,36 @@ class _FormFieldsSignUpWidgetState
                 ),
                 child: Align(
                   alignment: Alignment.center,
-                  child: UiLabelLarge(
-                    generateCountryFlag() + ' +20',
+                  child: FittedBox(
+                    child: Row(
+                      children: [
+                        FittedBox(
+                          child: UiLabelLarge(generateCountryFlag()),
+                        ),
+                        GapW4(),
+                        //
+                        FittedBox(
+                          child: UiLabelLarge(
+                            ' +20',
+                            // fontSize: MediaQuery.of(context).size.width * 0.023,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
+            // number
             Expanded(
               flex: 2,
               child: UiTextFormField(
                 hintText: C.PHONE_NUMBER,
                 // autofocus: true,
-                onFieldSubmitted: (v) {
-                  FocusScope.of(context).nextFocus();
-                },
+                // onFieldSubmitted: (v) {
+                //   FocusScope.of(context).nextFocus();
+                // },
+                // focusNode: focus,
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(4),

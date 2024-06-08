@@ -55,9 +55,15 @@ class AuthWidget extends StatelessWidget {
                         ),
                       ),
                       const GapH30(),
-                      UiTitleLarge(
-                        title,
-                        color: AppColor.onPrimary,
+                      FittedBox(
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: size.width * 0.2),
+                          child: UiTitleLarge(
+                            title,
+                            color: AppColor.onPrimary,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -75,11 +81,11 @@ class AuthWidget extends StatelessWidget {
                     margin: EdgeInsetsDirectional.only(
                       start: AppSizes.MARGIN_26,
                       end: AppSizes.MARGIN_26,
-                      top: size.height * 0.32,
-                      // bottom: AppSizes.MARGIN_20,
+                      top: size.height * 0.28,
+                      bottom: AppSizes.MARGIN_10,
                     ),
                     padding: EdgeInsets.symmetric(
-                      vertical: AppSizes.PADDING_64,
+                      vertical: AppSizes.PADDING_32,
                       horizontal: AppSizes.PADDING_20,
                     ),
                     decoration: BoxDecoration(
@@ -128,7 +134,7 @@ class MyPainter extends CustomPainter {
       // center point horizontal
       size.width / 2,
       // center point vertical
-      size.height * 1.3,
+      size.height * 1.2,
       // right bottom side point horizontal
       size.width,
       // right bottom side point vertical

@@ -40,7 +40,7 @@ class UiTextFormField extends StatelessWidget {
   final AutovalidateMode? autovalidateMode;
   final InputBorder? enabledBorder;
   UiTextFormField({
-    Key? key,
+    super.key,
     this.numLines = 1,
     this.floatingLabelBehavior = FloatingLabelBehavior.always,
     this.labelStyle,
@@ -72,26 +72,35 @@ class UiTextFormField extends StatelessWidget {
     this.onFieldSubmitted,
     this.textAlign = TextAlign.start,
     this.enableSuggestions = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     // final Locale f = Localizations.localeOf(context);
     ThemeData theme = Theme.of(context);
+    Size size = MediaQuery.of(context).size;
 
     return TextFormField(
       onEditingComplete: onEditingComplete,
       keyboardType: keyboardType,
       cursorColor: AppColor.textFormField,
+      cursorHeight: AppSizes.HEIGHT_30,
+
       inputFormatters: inputFormatters,
       initialValue: initialValue,
       onFieldSubmitted: onFieldSubmitted,
       readOnly: readOnly,
       autofocus: autofocus,
+
       enableSuggestions: enableSuggestions,
       enableInteractiveSelection: enableInteractiveSelection,
       autovalidateMode: autovalidateMode,
       // style: theme.textTheme.bodyLarge,
+      style: UpdateTextStyle(
+        previousTextStyle: labelStyle ?? theme.textTheme.labelLarge,
+        // color: AppColor.primary,
+        // fontSize: SizeConfig.getFontSize(14, context),
+      ),
       controller: controller,
       textInputAction: textInputAction,
 
@@ -101,6 +110,7 @@ class UiTextFormField extends StatelessWidget {
       obscureText: obscureText,
       textDirection: textDirection,
       focusNode: focusNode,
+
       textAlign: textAlign,
       // selectionControls:TextSelection.fromPosition(position),
       // textDirection: textDirection ??
@@ -120,7 +130,7 @@ class UiTextFormField extends StatelessWidget {
             ),
         errorText: errorText,
         contentPadding: EdgeInsets.symmetric(
-            vertical: AppSizes.PADDING_18, horizontal: AppSizes.PADDING_16),
+            vertical: AppSizes.PADDING_0, horizontal: AppSizes.PADDING_16),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppSizes.RADIUS_4),
           borderSide:
@@ -134,7 +144,10 @@ class UiTextFormField extends StatelessWidget {
           borderRadius: BorderRadius.circular(AppSizes.RADIUS_4),
           borderSide: BorderSide(color: AppColor.error, width: 1),
         ),
-        hintStyle: hintStyle ?? theme.textTheme.bodyMedium,
+        hintStyle: UpdateTextStyle(
+          previousTextStyle: hintStyle ?? theme.textTheme.labelLarge,
+          // fontSize: SizeConfig.getFontSize(14, context),
+        ),
         hintText: hintText,
         floatingLabelStyle: floatingLabelStyle,
         labelText: labelText,
@@ -142,6 +155,7 @@ class UiTextFormField extends StatelessWidget {
         labelStyle: UpdateTextStyle(
           previousTextStyle: labelStyle ?? theme.textTheme.labelLarge,
           // color: AppColor.primary,
+          // fontSize: SizeConfig.getFontSize(14, context),
         ),
         alignLabelWithHint: true,
       ),

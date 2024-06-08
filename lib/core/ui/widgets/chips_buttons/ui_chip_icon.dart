@@ -27,10 +27,12 @@ class UiChipIcon extends StatelessWidget {
       backgroundColor: backgroundColor ?? AppColor.primaryContainer,
       padding: const EdgeInsets.only(bottom: AppSizes.PADDING_0),
       side: BorderSide.none,
+
       labelPadding: const EdgeInsets.only(bottom: AppSizes.PADDING_0),
       label: ClipRRect(
         borderRadius: BorderRadius.circular(AppSizes.RADIUS_30),
         child: CircleAvatar(
+          radius: AppSizes.RADIUS_30,
           backgroundColor: backgroundColor ?? AppColor.primaryContainer,
           child: icon,
         ),

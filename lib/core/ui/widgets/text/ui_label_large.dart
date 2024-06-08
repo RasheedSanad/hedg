@@ -9,9 +9,11 @@ class UiLabelLarge extends StatelessWidget {
     this.color,
     this.textAlign,
     this.decoration,
+    this.fontSize,
   });
   final String text;
   final Color? color;
+  final double? fontSize;
   final TextAlign? textAlign;
   final TextDecoration? decoration;
 
@@ -23,6 +25,7 @@ class UiLabelLarge extends StatelessWidget {
       color: color,
       textAlign: textAlign,
       decoration: decoration,
+      fontSize: fontSize,
     );
   }
 }
