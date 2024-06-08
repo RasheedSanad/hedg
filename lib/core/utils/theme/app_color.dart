@@ -38,13 +38,16 @@ class AppColor {
 
   static Color color2 = Color(0xff1B404F);
   static Color blue = Color(0xff098AD3);
+  static Color blue15Transparency = Color(0x26098AD3); // new
   static Color secondary = Color(0xff00BF54);
   static Color onSecondary = Color(0xffffffff); // new
   static Color color4 = Color(0xff235347);
   static Color color5 = Color(0xff00BF90);
   static Color color6 = Color(0xff0DD967);
   static Color primary = Color(0xff1B506F);
-  static Color onPrimary = Color(0xff1B506F); // new
+  static Color onPrimary = Color(0xffffffff); // new
+  static Color primaryContainer = Color(0xffF2F7FF);
+  static Color onPrimaryContainer = Color(0xff000000);
   static Color disablePrimary = Color(0xff1B506F); // new
   static Color color8 = Color(0xffFFC53E);
   static Color color9 = Color(0xff6E838F);
@@ -55,5 +58,7 @@ class AppColor {
   static Color surface = Color(0xffffffff);
   static Color labelColor = Color(0xff6E838F);
   static Color textFormField = Color(0xff10284A);
+  static Color squareBtn = Color(0xffE6F3FB);
   static Color outline = Color(0x1A10284A); // 10% transparency
+  static Color error = Colors.red.shade700;
 }

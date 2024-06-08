@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hedg/core/utils/theme/app_color.dart';
 
 class UiScaffold extends StatelessWidget {
   const UiScaffold({
@@ -24,7 +25,7 @@ class UiScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: statusBarColor,
+      color: statusBarColor ?? AppColor.background,
       child: SafeArea(
         // left: false,
         // right: false,

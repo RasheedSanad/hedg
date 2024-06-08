@@ -23,12 +23,14 @@ class C {
   // * Login
   static const String LOGIN_IN_YOUR_ACCOUNT = "Log In Your Account";
   static const String EMAIL = "Email";
+  static const String EMAIL_IS_REQUIRED = "Email is required";
+  static const String ENTER_A_VALID_EMAIL_ADDRESS = 'Enter a valid email address';
   static const String PASSWORD = "Password";
-  static const String FORGOT_YOUR_PASSWORD = "Forgot Your Password?";
+  static const String FORGOT_YOUR_PASSWORD = "Forgot Your Password ?";
   static const String LOG_IN = "Log In";
-  static const String DONT_HAVE_AN_ACCOUNT = "Don't Have An Account?";
+  static const String DONT_HAVE_AN_ACCOUNT = "Don't Have An Account ?";
   static const String SIGN_UP = "Sign Up";
-  static const String FORGOT_PASSWORD = "Forgot Password?";
+  static const String FORGOT_PASSWORD = "Forgot Password ?";
   static const String ENTER_YOUR_PHONE_NUMBER_TO_RESET_YOUR_PASSWORD =
       "enter your phone number to reset your password";
   static const String PHONE_NUMBER = "Phone Number";
