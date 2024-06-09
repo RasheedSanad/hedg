@@ -1,14 +1,27 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../features/onboarding/controller/onboarding_controller.dart';
 import 'app_router.dart';
 import 'app_router_constant.dart';
 
 final goRouterProvider = Provider<GoRouter>(
   (ref) {
+    // onboarding
+    final isOnboardingCompleted = ref.read(onboardingNotifierProvider);
+
     return GoRouter(
-      initialLocation: AppRouterConstant.LOGIN,
+      initialLocation: isOnboardingCompleted
+          ? AppRouterConstant.SIGN_UP
+          : AppRouterConstant.ONBOARDING,
       routes: [
+        // ONBOARDING
+        GoRoute(
+          path: AppRouterConstant.ONBOARDING,
+          name: AppRouterConstant.ONBOARDING,
+          builder: (context, state) =>
+              AppRouter.onboardingPageRouteBuilder(context, state),
+        ),
         // * LOGIN
         // LOGIN
         GoRoute(

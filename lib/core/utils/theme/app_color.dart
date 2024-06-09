@@ -40,6 +40,7 @@ class AppColor {
   static const Color blue = Color(0xff098AD3);
   static const Color blue15Transparency = Color(0x26098AD3); // new
   static const Color secondary = Color(0xff00BF54);
+  static const Color subSecondary = Color(0xffB3ECCC); // new
   static const Color onSecondary = Color(0xffffffff); // new
   static const Color color4 = Color(0xff235347);
   static const Color color5 = Color(0xff00BF90);

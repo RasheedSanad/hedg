@@ -4,6 +4,7 @@ class C {
   static const String BACK = "Back";
   static const String OR = "or";
   static const String SEND = "Send";
+  static const String SKIP = "skip";
   static const String CONTINUE = "Continue";
   // * splash
   static const String INVEST_IN_YOUR_MONEY = "INVEST IN YOUR MONEY";

@@ -4,6 +4,7 @@ import 'package:hedg/features/auth/login/presentation/pages/create_password_page
 import 'package:hedg/features/auth/login/presentation/pages/forgot_password_page.dart';
 import 'package:hedg/features/auth/sign_up/presentation/sign_up_page.dart';
 import 'package:hedg/features/auth/sign_up/presentation/verify_sign_up_page.dart';
+import 'package:hedg/features/onboarding/pages/onboarding_page.dart';
 
 import '../../features/auth/login/presentation/pages/login_page.dart';
 
@@ -12,6 +13,12 @@ class AppRouter {
 
   //**************************************************/
   //* Begin Page Route Builder
+  // ONBOARDING
+  static onboardingPageRouteBuilder(
+          BuildContext context, GoRouterState state) =>
+      OnboardingPage(
+        key: state.pageKey,
+      );
   // * LOGIN
   // LOGIN
   static loginPageRouteBuilder(BuildContext context, GoRouterState state) =>

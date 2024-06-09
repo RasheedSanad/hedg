@@ -12,11 +12,13 @@ class UiChipIcon extends StatelessWidget {
     this.backgroundColor,
     this.onPressed,
     this.textColor,
+    this.shape,
   });
   final TextStyle? textStyle;
   final Widget? icon;
   final Color? backgroundColor;
   final Color? textColor;
+  final OutlinedBorder? shape;
   final Function()? onPressed;
 
   @override
@@ -27,7 +29,7 @@ class UiChipIcon extends StatelessWidget {
       backgroundColor: backgroundColor ?? AppColor.primaryContainer,
       padding: const EdgeInsets.only(bottom: AppSizes.PADDING_0),
       side: BorderSide.none,
-
+      shape: shape,
       labelPadding: const EdgeInsets.only(bottom: AppSizes.PADDING_0),
       label: ClipRRect(
         borderRadius: BorderRadius.circular(AppSizes.RADIUS_30),

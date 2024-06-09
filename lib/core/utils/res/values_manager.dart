@@ -177,6 +177,7 @@ class AppSizes {
 
   //Margins
   static double MARGIN_200 = 200.0.sp;
+  static double MARGIN_100 = 100.0.sp;
   static double MARGIN_60 = 60.0.sp;
   static double MARGIN_48 = 48.0.sp;
   static double MARGIN_46 = 46.0.sp;
